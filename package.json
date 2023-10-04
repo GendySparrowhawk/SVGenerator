@@ -1,0 +1,18 @@
+{
+  "name": "svgenerator",
+  "version": "1.0.0",
+  "description": "an application to generate a svg file with a  logo based on user prompts",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@inquirer/prompts": "^3.2.0",
+    "inquirer": "^8.2.4"
+  }
+}

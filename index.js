@@ -1,11 +1,21 @@
-const inquirer = require("inquirer");
-const svg = require('@svgdotjs/svg.js');
-const shapes = require('./lib/shapes');
+const inquirer = require('inquirer');
+// import { input } from '@inquirer/prompts';
+// const svg = require('@svgdotjs/svg.js');
+const LogoGenerator = require('./lib/shapes');
+const fs = require('fs');
 
 const questions = [
     {
         name: 'text',
-        message: 'What would you like the text of your logo to say(max 3 letters?'
+        message: 'What would you like the text of your logo to say(max 3 letters?',
+        validate: function (input) {
+            if (input.length <= 3) {
+                return true
+            }
+            else {
+                return 'Please enter up to 3 letters and no more.';
+            }
+        }
     },
     {
         name: 'textColor',
@@ -23,32 +33,22 @@ const questions = [
     }
 ]
 
-
-
-
-
-
 function init() {
-    inquirer.createPromptModule(questions).then((answers) => {
-        generateSVG(answers)
+    inquirer.prompt(questions).then((answers) => {
+        // console.log(answers)
+        const logoGeneratorInstance = new LogoGenerator(answers.text, answers.textColor, answers.shape, answers.shapeColor);
+        const newShape = logoGeneratorInstance.generateSVG(answers.shape);
+        // console.log(newShape);
+        fs.writeFile("logo.svg", newShape, (err) => {
+            if (err) {
+                console.log(err);
+            }
+            else {
+                console.log("file created sucessfully");
+            }
+        });
     });
 }
 
-class SVG {
-    constructor() {
-        this.textElement = '';
-        this.shapeElement = '';
-    }
-    setTextElement() {
-        this.textElement = `${answers.text}`;
-        this.textColor = `${answers.textColor}`
-    }
-    setShapeElement() {
-        this.shapeElement = `${answers.shape}`
-        this.shapeColor = `${answers.shapeColor}`
-    }
-    generateSVG() {
-        
-    }
-}
+
 init();
