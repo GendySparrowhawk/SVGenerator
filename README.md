@@ -11,11 +11,16 @@ an application to generate a svg file with a logo based on user prompts.
 6. [Authors](#Authors)
 7. [License](#License)
 8. [Questoins](#Questions?)
+
+
 ## Description
 This application is run in our terminal and can generate a simple logo with just 4 prompts.  You can also run tests on the shape classes to make sure you are getting the shape you want before running the program. 
 
 ### Dependencies
-[![node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+Make sure you have all of these (could not find a badge for Inquirer but you will also need that)
+1. ![node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+2. ![javaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+3. ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 
 ### Installing
 No install needed, just clone the code and go!
