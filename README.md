@@ -44,4 +44,4 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 ## Questions?
 Any questions? Email me here:
 Jacob Hoefer 
-@ Jacob.hoefer@gamil.com
+@ Jacob.hoefer@gmail.com
