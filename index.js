@@ -23,6 +23,13 @@ const questions = [
         mesasge: 'What color would you like htis text to be? (hex# or color name)'
     },
     {
+        name: 'fontFamily',
+        type: 'list',
+        choices: ['sans-serif', 'monospace', 'cursive'],
+        message: 'What font would you like?'
+
+    },
+    {
         name: 'shape',
         type: 'list',
         choices: ['Triangle', 'Circle', 'Square'],
@@ -36,7 +43,7 @@ const questions = [
 // the init function which first prompts the user then takes their answers and runs it through the logognerator class from shapes.js
 function init() {
     inquirer.prompt(questions).then((answers) => {
-        const logoGeneratorInstance = new LogoGenerator(answers.text, answers.textColor, answers.shape, answers.shapeColor);
+        const logoGeneratorInstance = new LogoGenerator(answers.text, answers.textColor, answers.fontFamily, answers.shape, answers.shapeColor);
         const newShape = logoGeneratorInstance.generateSVG(answers.shape);
         // the write file funciton that  actually produces the final product
         fs.writeFile("logo.svg", newShape, (err) => {
