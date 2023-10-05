@@ -27,6 +27,7 @@ No install needed, just clone the code and go!
 
 ### Running
 run node index.js to initialize the prompts and watch it go! You can also run the testing blocks with "npm test".
+Click here for a tutorial video: [Tutorial Video](https://drive.google.com/file/d/1Ewkdqx-rVbv8HN2Qgylf_f44wwpo74pC/view?usp=sharing)
 
 ## Help
 You may not enter more than 3 letters, also the color input works but is picky about exact hex values so be careful. Once you enter you cannot go back.
