@@ -3,14 +3,14 @@
 an application to generate a svg file with a logo based on user prompts.
 
 ## Table of Contents
-- [Description](#Description)
-- [Dependencies](#Dependencies)
-- [Instillation](#Installing)
-- [Execution](#Executing program)
-- [Help](#Help)
-- [Authors](#Authors)
-- [License](#License)
-- [Questoins](#Questions?)
+1. [Description](#Description)
+2. [Dependencies](#Dependencies)
+3. [Instillation](#Installing)
+4. [Execution](#Executing program)
+5. [Help](#Help)
+6. [Authors](#Authors)
+7. [License](#License)
+8. [Questoins](#Questions?)
 ## Description
 This application is run in our terminal and can generate a simple logo with just 4 prompts.  You can also run tests on the shape classes to make sure you are getting the shape you want before running the program. 
 
